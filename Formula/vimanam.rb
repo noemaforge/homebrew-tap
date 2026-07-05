@@ -5,21 +5,21 @@ class Vimanam < Formula
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://github.com/noemaforge/vimanam/releases/download/v1.0.0/vimanam-aarch64-apple-darwin.tar.xz"
-      sha256 "0fc146d8eede03e5b017f9169800b5a334bf42bc26843f6d533f66c9178cebd0"
+      sha256 "ee94a50d997956b659986a15ad77300f1ee41291f98dc59cad5ff1cd2ea1af59"
     end
     if Hardware::CPU.intel?
       url "https://github.com/noemaforge/vimanam/releases/download/v1.0.0/vimanam-x86_64-apple-darwin.tar.xz"
-      sha256 "cc9bb16a8cdfa8ee9214da3f5a985b9bef0d9f3071b21b13e1706154b2990443"
+      sha256 "5d7e82c3a609e787ba8945b9df0a842d65f4a10993ba0e55366a00b0effdfe34"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
       url "https://github.com/noemaforge/vimanam/releases/download/v1.0.0/vimanam-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "219643d1e5783f42548088ac7d1391d8c0332eb8fb0cd150e92d43249433c989"
+      sha256 "2ebf7d2e843689b69ad2e4399a0b60b0f1c8317997966b0093fcfdbd57102abf"
     end
     if Hardware::CPU.intel?
       url "https://github.com/noemaforge/vimanam/releases/download/v1.0.0/vimanam-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "cdaefe75b3ba237f60d538c081e59396b2c8dff5db795f6f0754892c3b8cca40"
+      sha256 "283d31f7464f60334e9bd42fba9100ee869d1a00de8df63a7b9a56f7eb4c1cae"
     end
   end
   license "Apache-2.0"
