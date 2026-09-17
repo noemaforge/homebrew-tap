@@ -1,25 +1,25 @@
 class Vimanam < Formula
   desc "OpenAPI/Swagger to Markdown documentation generator with grouping, filtering, and detail levels for docs and LLM context"
   homepage "https://github.com/noemaforge/vimanam"
-  version "1.0.1"
+  version "1.1.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/noemaforge/vimanam/releases/download/v1.0.1/vimanam-aarch64-apple-darwin.tar.xz"
-      sha256 "edfcfc99039dfdfb882c902b552d7492489b063a1adf75dd06525f67d988aa20"
+      url "https://github.com/noemaforge/vimanam/releases/download/v1.1.0/vimanam-aarch64-apple-darwin.tar.xz"
+      sha256 "f90d75d2a52c2c076d7c3e4af468efa90a6d7e55cf9c5c39877948e2ca3ea8e3"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/noemaforge/vimanam/releases/download/v1.0.1/vimanam-x86_64-apple-darwin.tar.xz"
-      sha256 "d4e7bdfc78cf09c4a510a1ce006c0e67557b14b719cb3daf0332d1decacaf68c"
+      url "https://github.com/noemaforge/vimanam/releases/download/v1.1.0/vimanam-x86_64-apple-darwin.tar.xz"
+      sha256 "c78df5736f9ae57c57b0d938197d296316c14f68e36e0aecc6c89e4ef3b20dd7"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/noemaforge/vimanam/releases/download/v1.0.1/vimanam-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "920346e3bbd3ddff1c156070fa1b63aafbf5072ff065ff7972d3103dbebf7ade"
+      url "https://github.com/noemaforge/vimanam/releases/download/v1.1.0/vimanam-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "421e4486f30990361b169f0f24b5a3152cb29aaf84785f1b9bb60ba44d0ab1ee"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/noemaforge/vimanam/releases/download/v1.0.1/vimanam-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "4e651b98aa43b72c01a80f696d6ee2962cded5eec44b0ee22f37aebd76d413c3"
+      url "https://github.com/noemaforge/vimanam/releases/download/v1.1.0/vimanam-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "755a9bd3c8eeac257cf8959b63f62a0700e0e6b21bf1d5df56d8df08f3dc1f2b"
     end
   end
   license "Apache-2.0"
@@ -48,10 +48,18 @@ class Vimanam < Formula
   end
 
   def install
-    bin.install "vimanam" if OS.mac? && Hardware::CPU.arm?
-    bin.install "vimanam" if OS.mac? && Hardware::CPU.intel?
-    bin.install "vimanam" if OS.linux? && Hardware::CPU.arm?
-    bin.install "vimanam" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "vimanam"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "vimanam"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "vimanam"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "vimanam"
+    end
 
     install_binary_aliases!
 
