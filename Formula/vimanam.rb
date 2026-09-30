@@ -1,25 +1,25 @@
 class Vimanam < Formula
   desc "OpenAPI/Swagger to Markdown documentation generator with grouping, filtering, and detail levels for docs and LLM context"
   homepage "https://github.com/noemaforge/vimanam"
-  version "1.4.0"
+  version "1.4.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/noemaforge/vimanam/releases/download/v1.4.0/vimanam-aarch64-apple-darwin.tar.xz"
-      sha256 "8d19f67b1a02af8ec6e52ccf600b54096ae737c25df75e49ccb8389405160089"
+      url "https://github.com/noemaforge/vimanam/releases/download/v1.4.1/vimanam-aarch64-apple-darwin.tar.xz"
+      sha256 "3137039ecb11f1d03392039c5ab4acf83e03232b0f1a9358b131957763082243"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/noemaforge/vimanam/releases/download/v1.4.0/vimanam-x86_64-apple-darwin.tar.xz"
-      sha256 "5dc4aa3b8f81912e01e46ff46e9e8a3bcc991eaa7dc12c7d916ad9c4a206892b"
+      url "https://github.com/noemaforge/vimanam/releases/download/v1.4.1/vimanam-x86_64-apple-darwin.tar.xz"
+      sha256 "3cf9afb94c14923cf8c883aca747f90c45a23f644876298a846c399dd8698a48"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/noemaforge/vimanam/releases/download/v1.4.0/vimanam-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "faa9f3b334719c496ccd0705dee33a5276295d4416eb30b64d0a5c2b7e489b07"
+      url "https://github.com/noemaforge/vimanam/releases/download/v1.4.1/vimanam-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "906218945cc663f9f8ebf81d0f02b3941571920b82d1861562cf9bf372f4a6ec"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/noemaforge/vimanam/releases/download/v1.4.0/vimanam-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "8b3060c980d577a1ef763f075b8df607597cffa2cde46e96118873c47bdca4ea"
+      url "https://github.com/noemaforge/vimanam/releases/download/v1.4.1/vimanam-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "019dd1ae626d883a58c98a5492e163765b8c192c7f2c3f78858b7cfd74f7f531"
     end
   end
   license "Apache-2.0"
